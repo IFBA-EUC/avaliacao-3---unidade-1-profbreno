@@ -16,7 +16,7 @@ Entrega até 23/09/2021 às 23:59
 - Crie uma classe RepositórioPedidos que armazene os pedidos de um supermercado.
   Essa classe deve ser capaz de gerar um relatório de vendas do dia.
 - A classe principal deve ser capaz de adicionar mais de um pedido, calcular o
-  valor total de cada pedido e gerar o relatório de vendas ao final do di, incluíndo
+  valor total de cada pedido e gerar o relatório de vendas ao final do dia, incluíndo
   lucro adquirido.
 */
 
@@ -34,13 +34,21 @@ public class Supermercado {
     Itens i3 = new Itens(2, macarrao, 1);
     Itens i4 = new Itens(3, acucar, 2);
 
-    Pedido pedido = new Pedido(1, "Cartão de Crédito", 3);
+    Pedido pedido = new Pedido(1, "Cartão de Crédito", 5);
     pedido.adicionarItem(i1);
     pedido.adicionarItem(i2);
     pedido.adicionarItem(i3);
     pedido.adicionarItem(i4);
 
-    pedido.imprimir();
+    Pedido pedido1 = new Pedido(2, "Cartão de Crédito", 3);
+    pedido1.adicionarItem(i1);
+    pedido1.adicionarItem(i2);
+
+    RepositórioPedidos repositorio = new RepositórioPedidos(10);
+    repositorio.adiciona(pedido);
+    repositorio.adiciona(pedido1);
+
+    System.out.println(repositorio.getRelatorio());
 
   }
 

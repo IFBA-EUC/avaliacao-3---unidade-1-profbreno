@@ -25,7 +25,7 @@ public class Pedido {
 
     public double getValorTotal() {
         double valorTotal = 0;
-        for (int i = 0; i < itens.length; i++) {
+        for (int i = 0; i < itens.length - 1; i++) {
             // valorTotal = valorTotal + itens[i].getPreco();
             valorTotal += itens[i].getPreco();
         }
